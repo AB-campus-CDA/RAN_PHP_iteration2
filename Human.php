@@ -6,12 +6,13 @@ class Human {
     public $nom;
     public $age;
     public $leCrimier = 'Le homard';
+    private $secret;
 
-    public function __construct(string $nom, int $taille = 175, int $age = 30 )
+    public function __construct(string $prenom, string $nomDeFamille, int $taille = 175, int $age = 30 )
     {
         echo "je suis né.e".PHP_EOL;
 
-        $this->nom = $nom;
+        $this->nom = $prenom.' '.$nomDeFamille;
         $this->taille = $taille;
         $this->age = $age;
     }
@@ -34,5 +35,16 @@ class Human {
         return $this->taille+1;
     }
 
+    public function setSecret(string $secret) {
+        $this->secret = $secret;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSecret(): string
+    {
+        return $this->secret;
+    }
 
 }
