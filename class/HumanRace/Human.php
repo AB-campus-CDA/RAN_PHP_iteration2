@@ -1,4 +1,6 @@
 <?php
+namespace App\HumanRace;
+
 
 class Human {
 
@@ -7,6 +9,7 @@ class Human {
     public $age;
     public $leCrimier = 'Le homard';
     private $secret;
+    public $force = 1;
 
     public function __construct(string $prenom, string $nomDeFamille, int $taille = 175, int $age = 30 )
     {
@@ -24,7 +27,8 @@ class Human {
 
     public function assassine(Human $victime) {
         $victime->leCrimier = $this->nom;
-        unset($victime);
+        echo 'Coups de couteau'.PHP_EOL;
+        unset($victime);    // fucking don't work that destroy the ref, not what is referred to
     }
 
     public function marche() {
