@@ -55,4 +55,11 @@ Human::howMany();
 $constance->faireEnfant();
 //$adam->faireEnfant();
 
+// run ?
+echo "Constance ? tu cours ?".PHP_EOL;
+$constance->courir();
 
+// du poil aux pattes ?
+echo "Humain : " . Human::pilosite();
+echo "Constance : ". $constance::pilosite();
+echo "Hommme : ". Man::pilosite();

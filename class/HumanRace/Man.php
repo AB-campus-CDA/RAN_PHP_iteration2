@@ -6,5 +6,9 @@ namespace App\HumanRace;
 
 class Man extends Human
 {
+    static public function pilosite()
+    {
+        return "Pilosité élevée".PHP_EOL;
+    }
     public $force = 2;
 }

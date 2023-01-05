@@ -1,8 +1,12 @@
 <?php
 namespace App\HumanRace;
 
+use App\Bipede;
+use App\Mammifere;
 
-class Human {
+abstract class Human implements Mammifere {
+
+    use Bipede;
 
     public $taille;
     public $nom;
@@ -60,5 +64,12 @@ class Human {
     {
         return $this->secret;
     }
+
+
+    static public function pilosite()
+    {
+        return "Pilosité variable".PHP_EOL;
+    }
+
 
 }
