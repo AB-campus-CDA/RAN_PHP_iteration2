@@ -6,5 +6,7 @@ namespace App\HumanRace;
 
 class Woman extends Human
 {
-
+    public function faireEnfant() {
+        echo 'Oui, je peux faire un enfant'.PHP_EOL;
+    }
 }

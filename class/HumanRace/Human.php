@@ -11,6 +11,12 @@ class Human {
     private $secret;
     public $force = 1;
 
+    public static int $population = 0;
+    public static function howMany() {
+        $num = self::$population;
+        echo "Il y a $num humain(s)".PHP_EOL;
+    }
+
     public function __construct(string $prenom, string $nomDeFamille, int $taille = 175, int $age = 30 )
     {
         echo "je suis né.e".PHP_EOL;
@@ -18,10 +24,14 @@ class Human {
         $this->nom = $prenom.' '.$nomDeFamille;
         $this->taille = $taille;
         $this->age = $age;
+
+        // populate
+        self::$population++;
     }
 
     public function __destruct()
     {
+        self::$population--;
         echo "$this->nom : $this->leCrimier m'a tué.e".PHP_EOL;
     }
 
